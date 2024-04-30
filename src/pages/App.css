@@ -1,0 +1,66 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.workspace {
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
+}
+.workspace:hover {
+	filter: drop-shadow(0 0 2em #646cffaa);
+}
+.workspace.react:hover {
+	filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes workspace-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.workspace {
+		animation: workspace-spin infinite 20s linear;
+	}
+}
+
+.card {
+	padding: 2em;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 1px;
+	background-color: rgb(0, 0, 0);
+	padding: 2px;
+}
+
+.grid-container > div {
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	aspect-ratio: 1;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	background-color: #27262669;
+}
+.gridslide {
+	display: flex;
+	overflow-x: scroll;
+	width: 50vw;
+	position: relative;
+	gap: 20px;
+	margin: 20px;
+}
